@@ -1,0 +1,277 @@
+/* =========================
+   GLOBAL / RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+}
+
+
+/* =========================
+   BACKGROUND (CANVAS)
+========================= */
+canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    color: #D3D3D3;
+    font-weight: 700;
+}
+
+.navlinks li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.navlinks a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+
+/* =========================
+   SECTIONS & LAYOUT
+========================= */
+.section {
+    min-height: 100vh;
+    padding: 140px 20px;
+    text-align: center;
+
+    /* Scroll animation */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 72px;
+}
+
+
+/* =========================
+   FLEX SECTIONS (CENTERED)
+========================= */
+.intro,
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   GLASS CARDS
+========================= */
+.hero-card,
+.contact-card {
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+
+/* =========================
+   PROJECTS / CARDS
+========================= */
+.projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================
+   PROJECT LINKS
+========================= */
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-links a {
+    color: #ff7a18;
+    text-decoration: none;
+    position: relative;
+}
+
+.project-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff7a18;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+
+.project-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+.btn.primary {
+    background: #ff7a18;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Secondary buttons (GitHub / LinkedIn) */
+.btn.secondary {
+    background: transparent;
+    border: 1px solid #ff7a18;
+    color: #ff7a18;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn.secondary:hover {
+    background: #ff7a18;
+    color: white;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+/* =========================
+   EMAIL LINK
+========================= */
+.contact-card a {
+    color: #ff7a18;
+}
+
+
+/* =========================
+   SCROLL ARROWS
+========================= */
+.scroll-up,
+.scroll-down {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0.7;
+}
+
+.scroll-up {
+    top: 20px;
+    animation: bounceUp 1.5s infinite;
+}
+
+.scroll-down {
+    bottom: 20px;
+    animation: bounceDown 1.5s infinite;
+}
+
+@keyframes bounceDown {
+    50% { transform: translate(-50%, 10px); }
+}
+
+@keyframes bounceUp {
+    50% { transform: translate(-50%, -10px); }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isak Lagerberg | IT Security & Systems</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Webbportfolio</div>
+
+    <nav>
+        <ul class="navlinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#intro">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<canvas id="backgroundCanvas"></canvas>
+
+<main class="content">
+
+<!-- HERO -->
+<section id="home" class="section hero">
+    <div class="hero-content">
+        <h1>Isak Lagerberg</h1>
+        <p>IT Security & Systems</p>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section id="intro" class="section intro">
+    <div class="hero-card">
+        <h2>Om mig</h2>
+
+        <p class="subtitle">
+            Blivande IT-säkerhetsspecialist med fokus på drift, nätverk och system.
+        </p>
+
+        <p class="description">
+            Studerar IT-säkerhet och mjukvarutestning vid Högskolan Dalarna.
+            Erfarenhet av Linux, serverdrift och utveckling av egna system.
+        </p>
+
+        <p class="description">
+            Har arbetat med drift i produktionsmiljöer samt utveckling i Python, C# och Java.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <h2>Kompetenser</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>System & Drift</h3>
+            <p>Linux (Red Hat, SLES), VMware, serveradministration</p>
+            <p>Operativsystem, felsökning i produktionsmiljö</p>
+        </div>
+
+        <div class="card">
+            <h3>Programmering</h3>
+            <p>Python, C#, Java</p>
+            <p>OOP, algoritmer, mjukvarudesign</p>
+        </div>
+
+        <div class="card">
+            <h3>Nätverk & Säkerhet</h3>
+            <p>CCNA-grunder, routing, nätverk</p>
+            <p>Kryptografi, etisk hackning</p>
+        </div>
+
+        <div class="card">
+            <h3>Test & Analys</h3>
+            <p>Mjukvarutestning, logganalys</p>
+            <p>Systemgranskning och felsökning</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+    <h2>Erfarenhet</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Trafikverket</h3>
+            <p><strong>Systemtekniker</strong></p>
+            <p>Ansvarade för drift och underhåll av servrar i VMware-miljö.</p>
+            <p>Arbete i Linux (Red Hat, SLES) och felsökning i produktionsmiljö.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ex-change Parts</h3>
+            <p><strong>Utveckling & System</strong></p>
+            <p>Utveckling och integration av egen mjukvara.</p>
+            <p>Administration, dokumentation och operativ uppföljning.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>Projekt</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>ASCII Donut</h3>
+            <p>3D-rendering i ASCII med Python & Pygame.</p>
+            <div class="project-links">
+                <a href="https://github.com/AvidStacker/ASCIIDonut/blob/main/main.py" target="_blank">GitHub</a>
+                <a href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>NetProbe</h3>
+            <p>Nätverksanalysverktyg för scanning och säkerhet.</p>
+            <div class="project-links">
+                <a href="https://github.com/AvidStacker/NetProbe" target="_blank">GitHub</a>
+                <a href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Falling Sand</h3>
+            <p>Fysiksimulering av sand, vätska och gas.</p>
+            <div class="project-links">
+                <a href="https://github.com/AvidStacker/FallingSand" target="_blank">GitHub</a>
+                <a href="#">Live Demo</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <div class="contact-card">
+        <h2>Kontakt</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Ditt namn" required>
+            <input type="email" placeholder="Din email" required>
+            <textarea placeholder="Meddelande..." rows="5" required></textarea>
+
+            <button type="submit" class="btn primary">Skicka</button>
+        </form>
+
+        <div class="social-links">
+            <a href="https://github.com/AvidStacker" target="_blank" class="btn secondary">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/isaklagerberg/" target="_blank" class="btn secondary">
+                LinkedIn
+            </a>
+        </div>
+
+        <p style="margin-top:15px;">
+            <a href="mailto:dev.lagerberg@gmail.com">
+                dev.lagerberg@gmail.com
+            </a>
+        </p>
+    </div>
+</section>
+
+</main>
+
+<div class="scroll-up" onclick="scrollPrevGlobal()">↑</div>
+<div class="scroll-down" onclick="scrollNextGlobal()">↓</div>
+
+<script type="module" src="infinitelandscape.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
