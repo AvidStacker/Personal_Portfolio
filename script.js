@@ -47,3 +47,79 @@ window.addEventListener('load', () => {
     document.querySelector('#home').classList.add('visible');
     updateArrows();
 });
+
+const text = "Isak Lagerberg";
+const speed = 100;
+const displayTime = 2500;
+
+let i = 0;
+
+function typeWriter() {
+    const element = document.getElementById("typewriter");
+
+    // SKRIV
+    if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    } else {
+        // ⏸ Vänta innan vi tar bort texten
+        setTimeout(() => {
+            element.innerHTML = "";
+            i = 0;
+            typeWriter();
+        }, displayTime);
+    }
+}
+
+window.addEventListener("load", () => {
+    typeWriter();
+});
+
+function openModal(project) {
+    const modal = document.getElementById("modal");
+    const title = document.getElementById("modal-title");
+    const text = document.getElementById("modal-text");
+
+    if (project === "homelab") {
+        title.innerText = "Homelab Infrastructure";
+        text.innerText = `
+        Full virtualiserad miljö byggd med Proxmox.
+
+        - Netbird för säker access
+        - TrueNAS Scale för lagring
+        - Portainer för container management
+
+        Media automation stack:
+        Radarr, Sonarr, NZB, Jellyfin, Emby
+        `;
+    }
+
+    else if (project === "netprobe") {
+        title.innerText = "NetProbe";
+        text.innerText = `
+        Verktyg för nätverksanalys och scanning.
+
+        - Port scanning
+        - Nätverksinspektion
+        - Fokus på säkerhet och analys
+        `;
+    }
+
+    else if (project === "fallingsand") {
+        title.innerText = "Falling Sand";
+        text.innerText = `
+        Interaktiv fysiksimulering.
+
+        - Sand, vätska och gas
+        - Realtids rendering
+        - Fokus på simulation och systemlogik
+        `;
+    }
+
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}

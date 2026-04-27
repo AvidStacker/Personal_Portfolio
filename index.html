@@ -35,7 +35,7 @@
 <!-- HERO -->
 <section id="home" class="section hero">
     <div class="hero-content">
-        <h1>Isak Lagerberg</h1>
+        <h1 id="typewriter"></h1>
         <p>IT Security & Systems</p>
     </div>
 </section>
@@ -65,31 +65,25 @@
     <h2>Kompetenser</h2>
 
     <div class="projects">
-
         <div class="card">
             <h3>System & Drift</h3>
             <p>Linux (Red Hat, SLES), VMware, serveradministration</p>
-            <p>Operativsystem, felsökning i produktionsmiljö</p>
         </div>
 
         <div class="card">
             <h3>Programmering</h3>
             <p>Python, C#, Java</p>
-            <p>OOP, algoritmer, mjukvarudesign</p>
         </div>
 
         <div class="card">
             <h3>Nätverk & Säkerhet</h3>
-            <p>CCNA-grunder, routing, nätverk</p>
-            <p>Kryptografi, etisk hackning</p>
+            <p>CCNA, routing, kryptografi</p>
         </div>
 
         <div class="card">
             <h3>Test & Analys</h3>
-            <p>Mjukvarutestning, logganalys</p>
-            <p>Systemgranskning och felsökning</p>
+            <p>Mjukvarutestning, felsökning</p>
         </div>
-
     </div>
 </section>
 
@@ -98,21 +92,17 @@
     <h2>Erfarenhet</h2>
 
     <div class="projects">
-
         <div class="card">
             <h3>Trafikverket</h3>
             <p><strong>Systemtekniker</strong></p>
-            <p>Ansvarade för drift och underhåll av servrar i VMware-miljö.</p>
-            <p>Arbete i Linux (Red Hat, SLES) och felsökning i produktionsmiljö.</p>
+            <p>Drift och serverunderhåll i VMware & Linux.</p>
         </div>
 
         <div class="card">
             <h3>Ex-change Parts</h3>
             <p><strong>Utveckling & System</strong></p>
-            <p>Utveckling och integration av egen mjukvara.</p>
-            <p>Administration, dokumentation och operativ uppföljning.</p>
+            <p>Integration och utveckling av systemlösningar.</p>
         </div>
-
     </div>
 </section>
 
@@ -122,30 +112,69 @@
 
     <div class="projects">
 
+        <!-- HOMELAB -->
+        <div class="card">
+            <h3>Homelab Infrastructure</h3>
+            <p>Virtualiserad labbmiljö med Proxmox och container-baserad stack.</p>
+
+            <div class="project-links">
+                <a href="https://github.com/AvidStacker" target="_blank">GitHub</a>
+
+                <a href="#"
+                   onclick="event.preventDefault(); openModal('homelab')">
+                   Details
+                </a>
+            </div>
+        </div>
+
+        <!-- ASCII DONUT -->
         <div class="card">
             <h3>ASCII Donut</h3>
             <p>3D-rendering i ASCII med Python & Pygame.</p>
+
             <div class="project-links">
                 <a href="https://github.com/AvidStacker/ASCIIDonut/tree/main" target="_blank">GitHub</a>
-                <a href="#">Live Demo</a>
+
+                <a href="#" onclick="event.preventDefault()">Live Demo</a>
+
+                <a href="#"
+                   onclick="event.preventDefault(); openModal('ascii')">
+                   Details
+                </a>
             </div>
         </div>
 
+        <!-- NETPROBE -->
         <div class="card">
             <h3>NetProbe</h3>
             <p>Nätverksanalysverktyg för scanning och säkerhet.</p>
+
             <div class="project-links">
                 <a href="https://github.com/AvidStacker/NetProbe" target="_blank">GitHub</a>
-                <a href="#">Live Demo</a>
+
+                <a href="#" onclick="event.preventDefault()">Live Demo</a>
+
+                <a href="#"
+                   onclick="event.preventDefault(); openModal('netprobe')">
+                   Details
+                </a>
             </div>
         </div>
 
+        <!-- FALLING SAND -->
         <div class="card">
             <h3>Falling Sand</h3>
             <p>Fysiksimulering av sand, vätska och gas.</p>
+
             <div class="project-links">
                 <a href="https://github.com/AvidStacker/FallingSand" target="_blank">GitHub</a>
-                <a href="#">Live Demo</a>
+
+                <a href="#" onclick="event.preventDefault()">Live Demo</a>
+
+                <a href="#"
+                   onclick="event.preventDefault(); openModal('fallingsand')">
+                   Details
+                </a>
             </div>
         </div>
 
@@ -166,22 +195,24 @@
         </form>
 
         <div class="social-links">
-            <a href="https://github.com/AvidStacker" target="_blank" class="btn secondary">
-                GitHub
-            </a>
-
-            <a href="https://www.linkedin.com/in/isaklagerberg/" target="_blank" class="btn secondary">
-                LinkedIn
-            </a>
+            <a href="https://github.com/AvidStacker" target="_blank" class="btn secondary">GitHub</a>
+            <a href="https://www.linkedin.com/in/isaklagerberg/" target="_blank" class="btn secondary">LinkedIn</a>
         </div>
 
         <p style="margin-top:15px;">
-            <a href="mailto:dev.lagerberg@gmail.com">
-                dev.lagerberg@gmail.com
-            </a>
+            <a href="mailto:dev.lagerberg@gmail.com">dev.lagerberg@gmail.com</a>
         </p>
     </div>
 </section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
 
 </main>
 
